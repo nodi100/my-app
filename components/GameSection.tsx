@@ -7,7 +7,7 @@ import { GameCard } from "./GameCard";
 
 interface GameSectionProps {
   title: string;
-  games: Game[];
+  games: Game[] | [];
   icon?: React.ReactNode;
   className?: string;
 }

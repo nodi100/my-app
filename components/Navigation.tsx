@@ -14,12 +14,12 @@ export function Navigation({
   className = "",
 }: NavigationProps) {
   const [selectedCategory, setSelectedCategory] = useState<string>(
-    NAVIGATION_ITEMS[0].label
+    NAVIGATION_ITEMS[0].value
   );
 
   const selectCategory = (category: string) => {
     setSelectedCategory(category);
-    if (category !== NAVIGATION_ITEMS[0].label) {
+    if (!!category) {
       onCategoryChange([category as GameCategory]);
     } else {
       onCategoryChange([]);
@@ -38,12 +38,12 @@ export function Navigation({
               <button
                 key={item.label}
                 className={`flex items-center space-x-2 px-2 py-2 rounded-lg whitespace-nowrap transition-colors cursor-pointer ${
-                  selectedCategory === item.label
+                  selectedCategory === item.value
                     ? "bg-gray-700 text-white"
                     : "bg-gray-800 text-gray-400 hover:text-white hover:bg-gray-700"
                 }`}
                 onClick={() => {
-                  selectCategory(item.label);
+                  selectCategory(item.value);
                 }}
               >
                 <Icon />

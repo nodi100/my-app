@@ -38,11 +38,14 @@ export function Header({
 
   useEffect(() => {
     if (filters.categories && filters.categories?.length > 0) {
-      let selected: any = [];
+      const selected: Array<{ value: GameCategory; label: string }> = [];
       filters.categories.forEach((item) => {
-        selected.push(
-          GAME_CATEGORIES.find((cat) => item.toLocaleLowerCase() === cat.value)
+        const category = GAME_CATEGORIES.find(
+          (cat) => item.toLocaleLowerCase() === cat.value
         );
+        if (category) {
+          selected.push(category);
+        }
       });
 
       setSelectedCategories(selected);
@@ -51,11 +54,14 @@ export function Header({
 
   useEffect(() => {
     if (filters.providers && filters.providers?.length > 0) {
-      let selected: any = [];
+      const selected: Array<{ value: GameProvider; label: string }> = [];
       filters.providers.forEach((item) => {
-        selected.push(
-          GAME_PROVIDERS.find((cat) => item.toLocaleLowerCase() === cat.value)
+        const provider = GAME_PROVIDERS.find(
+          (cat) => item.toLocaleLowerCase() === cat.value
         );
+        if (provider) {
+          selected.push(provider);
+        }
       });
 
       setSelectedCategories(selected);

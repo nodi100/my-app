@@ -28,7 +28,7 @@ export default async function HomePage() {
     return data;
   }
 
-  const InitialGames = await fetchHomePageGames();
+  const initialGames = await fetchHomePageGames();
 
-  return <GamesList initialGames={InitialGames} />;
+  return <GamesList initialGames={initialGames || {}} />;
 }

@@ -29,6 +29,10 @@ export const GAME_CATEGORIES: { value: GameCategory; label: string }[] = [
   { value: "books", label: "Books" },
   { value: "bonus-buy", label: "Bonus Buy" },
   { value: "fruits", label: "Fruits" },
+  { value: "hot", label: "Hot" },
+  { value: "featured-games", label: "Featured" },
+  { value: "new-releases", label: "New Releases" },
+  { value: "hot-games", label: "Hot Games" },
 ];
 
 export const GAME_PROVIDERS: { value: GameProvider; label: string }[] = [
@@ -40,21 +44,21 @@ export const GAME_PROVIDERS: { value: GameProvider; label: string }[] = [
 ];
 
 export const NAVIGATION_ITEMS = [
-  { label: "Lobby", icon: Home },
-  { label: "Slots", icon: Rocket },
-  { label: "Blackjack", icon: Spade },
-  { label: "Roulette", icon: Circle },
-  { label: "Live", icon: Video },
-  { label: "Baccarat", icon: Diamond },
-  { label: "Crash", icon: TrendingUp },
-  { label: "Dice", icon: Dice6 },
-  { label: "Video Poker", icon: Monitor },
-  { label: "Fruits", icon: Apple },
-  { label: "Books", icon: Book },
-  { label: "Bonus Buy", icon: Award },
-  { label: "Hot", icon: Flame },
-  { label: "Featured", icon: Crown },
-  { label: "New", icon: Zap },
+  { label: "Lobby", icon: Home, value: "" },
+  { label: "Slots", icon: Rocket, value: "slots" },
+  { label: "Blackjack", icon: Spade, value: "blackjack" },
+  { label: "Roulette", icon: Circle, value: "roulette" },
+  { label: "Live", icon: Video, value: "live" },
+  { label: "Baccarat", icon: Diamond, value: "baccarat" },
+  { label: "Crash", icon: TrendingUp, value: "crash" },
+  { label: "Dice", icon: Dice6, value: "dice" },
+  { label: "Video Poker", icon: Monitor, value: "video-poker" },
+  { label: "Fruits", icon: Apple, value: "fruits" },
+  { label: "Books", icon: Book, value: "books" },
+  { label: "Bonus Buy", icon: Award, value: "bonus-buy" },
+  { label: "Hot", icon: Flame, value: "hot" },
+  { label: "Featured", icon: Crown, value: "featured-games" },
+  { label: "New", icon: Zap, value: "new-releases" },
 ];
 
 export const FEATURED_SECTIONS = [

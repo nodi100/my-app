@@ -19,6 +19,8 @@ export default function GamesList({ initialGames }: GamesListProps) {
     limit: 20,
   });
 
+  const gamesList = initialGames || {};
+
   const handleSearch = useCallback(
     (search: string) => {
       updateFilters({ search });
@@ -107,7 +109,7 @@ export default function GamesList({ initialGames }: GamesListProps) {
               <GameSection
                 key={section.category}
                 title={section.title}
-                games={initialGames[section.category]}
+                games={gamesList[section.category] || []}
                 icon={
                   index === 0 ? (
                     <Crown className="w-5 h-5" />
