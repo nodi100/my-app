@@ -31,7 +31,7 @@ export function GameGrid({
   }
 
   return (
-    <div className="grid gap-4 [grid-template-columns:repeat(auto-fit,112px)] md:[grid-template-columns:repeat(auto-fit,150px)]">
+    <div className="grid gap-2 md:gap-4 [grid-template-columns:repeat(auto-fit,112px)] md:[grid-template-columns:repeat(auto-fit,150px)]">
       {loading ? (
         <>
           {Array.from({ length: 12 }).map((_, i) => (
