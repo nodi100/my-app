@@ -1,7 +1,9 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
+/** @type {import('next').NextConfig} */
+const nextConfig: import("next").NextConfig = {
+  images: {
+    domains: ["api.remailer.eu"],
+    unoptimized: true,
+  },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
